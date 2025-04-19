@@ -12,16 +12,22 @@ html {
 }
 .hero {
   background-image: url('imgs/moaaz-baig-S3bxQ6iN2nE-unsplash.jpg');
-  /* <-- apni image ka path daalna yaha */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  position: relative;
+    /* <-- apni image ka path daalna yaha */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1230px) {
+
+
 }
 
 .overlay {
