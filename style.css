@@ -1,0 +1,805 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body,
+html {
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+  
+}
+.hero {
+  background-image: url('imgs/moaaz-baig-S3bxQ6iN2nE-unsplash.jpg');
+  /* <-- apni image ka path daalna yaha */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.overlay2 {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.logoAndMenu {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  width: 1685px;
+  padding: 7px 98px;
+  position: fixed;
+  z-index: 300;
+  background: #000000bd;
+  border-top-left-radius: 40px;
+
+}
+
+.hero-content {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  background-color: rgb(0 0 0 / 83%);
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  margin-top: 40px;
+  color: #a5a5a5;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #a5a5a5;
+  width: 700px;
+  text-align: start;
+}
+
+
+.menu {
+  position: relative;
+  z-index: 2;
+}
+
+#stn2 {
+  padding: 60px 20px;
+  background-color: #00000030;
+  color: #333;
+  text-align: center;
+}
+
+#stnHeading {
+  padding: 60px 20px;
+  background-color: white;
+  color: #333;
+  text-align: center;
+
+}
+
+#stnHeading h1 {
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+#stnHeading p {
+  width: 1000px;
+  margin: auto;
+  font-size: 20px;
+}
+
+
+#stnHeading2{
+  /* border: 1px solid black; */
+  margin: auto;
+  width: 1000px;
+}
+
+
+#bm_infor{
+  color: black;
+  text-decoration: none;
+}
+
+.stnText{
+  width: 1000px;
+  margin: auto;
+}
+.stnText ul{
+   text-align: start;
+   width: 1200px;
+}
+
+
+#stn2 h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#stn2 h1 {
+  font-size: 40px;
+}
+
+#stn2 p {
+  max-width: 700px;
+  margin: -18px auto;
+  font-size: 19px;
+
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  margin: 12px 12px;
+}
+
+.menu-list li a {
+  padding: 2px 12px;
+  margin: 12px 12px;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  color: white;
+}
+
+.menu-list li a:hover {
+  text-decoration: underline;
+  color: rgb(168, 168, 168);
+}
+
+
+#StartRace {
+  position: relative;
+  z-index: 3;
+}
+
+#color-animation {
+  background: linear-gradient(107deg, #ffffff, #444444, #ffffff, #5e5e5e, #000000, #3c3c3c);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+.Upanimetion {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s forwards;
+  animation-delay: 0.4s;
+
+}
+
+/* Jab page load hota hai tab hi animate hoga */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.interior {
+  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.card {
+  margin: 1px 12px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 1448px;
+  display: flex;
+  height: 308px;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 20px;
+
+
+}
+
+.image-wrapper {
+  width: 50%;
+  perspective: 1000px;
+}
+
+.image-inner {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.image-inner img {
+  width: 55%;
+  border-radius: 12px;
+  transform-style: preserve-3d;
+}
+
+
+#stn3 {
+  border: 1px solid black;
+  height: 800px;
+  width: 1500px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.box,
+.compare-box {
+  border-radius: 10px;
+  padding: 10px;
+  height: 747px;
+  margin-top: -70px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.thumbs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mainDisplay {
+  height: 450px;
+  width: 3000px;
+
+}
+
+.thumbs-wrapper {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid lightgray;
+  margin: 10px 0;
+}
+
+.thumbs img {
+  width: 101px;
+  margin: 11px;
+  cursor: pointer;
+}
+
+.thumb.selected {
+  border: 2px solid rgb(83, 83, 83);
+}
+
+button {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#result {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.animation-line {
+  height: 10px;
+  background: red;
+  animation: move 3s linear forwards;
+  width: 0;
+  margin: 10px 0;
+}
+
+@keyframes move {
+  to {
+    width: 100%;
+  }
+}
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.popup-content {
+  background: #111;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  color: #00ffcc;
+  font-size: 1.5rem;
+  box-shadow: 0 0 20px #00ffcc;
+  animation: popupScale 0.5s ease;
+}
+
+.popup-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #00ffcc;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes popupScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.shake {
+  animation: shake 0.1s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+
+  75% {
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.carsname {
+  width: 308px;
+  line-height: 24px;
+  padding: 0px 84px;
+  font-weight: bolder;
+}
+
+
+
+/* Wheel spin animation */
+@keyframes spinWheel {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+
+.spinning {
+  animation: spinWheel 1.2s ease-out;
+}
+
+/* CS BMW Button Style */
+.cs-bmw-button {
+  padding: 6px 12px;
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Wheel image position */
+#wheelSpin {
+  width: 50px;
+  display: none;
+  position: absolute;
+  left: 60px;
+  top: 370px;
+}
+
+
+.nos-flame {
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  background: radial-gradient(circle, #00f 20%, transparent 70%);
+  opacity: 0;
+  animation: nosBurn 0.3s infinite;
+  transform: translateY(50px);
+  z-index: 2;
+  border-radius: 50%;
+}
+
+@keyframes nosBurn {
+  0% {
+    transform: translateY(50px) scaleY(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateY(55px) scaleY(1.2);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(60px) scaleY(1);
+    opacity: 0;
+  }
+}
+
+.raceHeading {
+  margin: auto;
+  width: 1200px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+}
+
+
+
+
+.bmw-360-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.view360 {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.view360:hover {
+  transform: rotateY(15deg);
+}
+
+
+
+
+
+
+
+#stn4 {
+  background-image: url('./imgs/devon-janse-van-rensburg-yoqHLUayUTg-unsplash.jpg');
+  /* <-- apni image ka path daalna yaha */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  align-items: center;
+
+}
+
+.allText_stn4 {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  text-align: center;
+  justify-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000ba;
+}
+
+.allText_stn4 h1 {
+  font-size: 40px;
+  margin-top: 50px;
+
+}
+
+.allText_stn4 p {
+  font-size: 19px;
+  padding: 12px 350px;
+  line-height: 25px;
+  margin-bottom: 9px;
+}
+
+.allText_stn4 a {
+  border: 1px solid #000000;
+  background-color: #666666;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  margin-bottom: 100px;
+  font-weight: bolder;
+}
+
+.allText_stn4 a:hover {
+  background-color: #525252;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.PerformanceInfo h1 {
+  font-size: 40px;
+  margin-top: 50px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 60px;
+}
+
+#InfoBoxs {
+  width: 1500px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info1 {
+  height: 539px;
+  width: 426px;
+  margin: auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 33px -15px #000000;
+}
+
+.info1 h1 {
+  padding: 0px 20px;
+  font-size: 30px;
+}
+
+.info1 p {
+  padding: 0px 20px;
+  font-size: 19px;
+}
+
+.info1 a {
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.info1 a:hover {
+  background-color: #060606cc;
+}
+
+
+#Hood {
+  width: 375px;
+  margin: 10px auto;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+#Hood:hover {
+  animation: shake 0.8s infinite;
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 33px -15px #000000;
+}
+
+#Wheels {
+  width: 234px;
+  margin: 10px auto;
+  display: flex;
+  padding: 50px;
+  /* border: 1px solid red; */
+}
+
+#Wheels:hover {
+  animation: shake 0.8s infinite;
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 33px -15px #000000;
+}
+
+#Diffuser {
+  width: 234px;
+  margin: 10px auto;
+  display: flex;
+  padding: 20px;
+  /* border: 1px solid red; */
+}
+
+#Diffuser:hover {
+  animation: shake 0.8s infinite;
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 33px -15px #000000;
+}
+
+#Exhaust {
+  width: 234px;
+  margin: 10px auto;
+  display: flex;
+  padding: 30px;
+  /* border: 1px solid red; */
+}
+
+#Exhaust:hover {
+  animation: shake 0.8s infinite;
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 33px -15px #000000;
+}
+
+#Suspension {
+  width: 234px;
+  margin: 10px auto;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+#Suspension:hover {
+  animation: shake 0.8s infinite;
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 33px -15px #000000;
+}
+
+footer {
+  margin-top: 120px;
+  background-color: #575757;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-media a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.social-media li {
+  list-style: none;
+  display: flex;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+.footer-links li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+
+
+#Digital_bmw{
+  border: #000000 1px solid;
+  margin: 70px auto;
+  text-align: center;
+}
+
+.dg_box{
+  border: 1px solid red;
+}
+
+.dg_box1{
+ border: #ff0000 000 1px solid;
+  margin: auto;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dg_box1_text{
+  margin: 120px;
+  text-align: start;
+}

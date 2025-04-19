@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="stn3">
+   
+        <div class="container">
+          <!-- BMW M4 Image -->
+          <div class="box">
+            <img
+              src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/all-models/m-automobile/m4-x-kith/bmw-m4-x-kith-ms-02.jpg"
+              alt="BMW Base Image" />
+            <p><strong>BMW M4</strong> - HP: <span id="bmwHP">503</span></p>
+    
+            <!-- CS BMW Button -->
+            <button id="bmwTuneBtn" onclick="tuneBMW()">CS BMW</button>
+    
+            <!-- Tune Popup -->
+            <div id="stagePopup" class="popup hidden">
+              <div class="popup-content">
+                <p id="stagePopupText">Stage 1 Tune Applied!</p>
+              </div>
+            </div>
+    
+            <audio id="engineSound" src="./New folder/big-block-v8-rev-90919.mp3"></audio>
+    
+    
+    
+          </div>
+    
+          <!-- Start Race Button -->
+          <div class="container">
+            <button onclick="startRace()">Start Race</button>
+          </div>
+    
+    
+    
+    
+          <!-- Comparison Section -->
+          <div class="compare-box">
+            <div class="display-area">
+              <img id="mainDisplay"
+                src="https://hips.hearstapps.com/hmg-prod/images/2023-mercedes-amg-c63-s-e-performance-109-65d79697e865a.jpg?crop=0.577xw:0.432xh;0.131xw,0.376xh&resize=1200:*"
+                alt="Selected Image" />
+              <p class="carsname"><strong><span style="margin: 12px;" id="car2Name">Mercedes</span><br></strong>
+                &nbsp;&nbsp; HP: <span id="selectedHP"></span></p>
+            </div>
+    
+    
+            <div class="thumbs-container">
+              <div class="arrow" onclick="scrollThumbs(-1)">&#8679;</div>
+              <div class="thumbs-wrapper" id="thumbsWrapper">
+                <div class="thumbs" id="thumbsList">
+                  <img name="Mercedes" class="thumb selected"
+                    src="https://hips.hearstapps.com/hmg-prod/images/2023-mercedes-amg-c63-s-e-performance-109-65d79697e865a.jpg?crop=0.577xw:0.432xh;0.131xw,0.376xh&resize=1200:*"
+                    data-hp="480" alt="1" />
+                  <img name="Bugatti" class="thumb selected"
+                    src="https://static.wixstatic.com/media/6a6a9d_b577a3d8d06d4424b81015a059a5c5f9~mv2.jpg/v1/fill/w_824,h_548,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Bugatti%20Turbillon-28.jpg"
+                    data-hp="480" alt="1" />
+                  <img name="Nissan GT-R" class="thumb"
+                    src="https://www.topgear.com/sites/default/files/news-listicle/image/nissan-gt-r-2016-katsura-orange_-068-source.jpg?w=424&h=239"
+                    data-hp="540" alt="2" />
+                  <img class="thumb"
+                    src="https://www.financialexpress.com/wp-content/uploads/2022/04/2023-Toyota-GR-Supra.jpg" data-hp="600"
+                    alt="3" />
+                  <img class="thumb"
+                    src="https://media.drive.com.au/obj/tx_q:70,rs:auto:1200:675:1/driveau/upload/cms/uploads/dej59kxqoyj7og2g29fa"
+                    data-hp="450" alt="4" />
+                  <img class="thumb"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkLip33h9mRcTiY_jjz-CFg8pW-7ZjG-v5kg&s"
+                    data-hp="700" alt="5" />
+                  <img class="thumb"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkLip33h9mRcTiY_jjz-CFg8pW-7ZjG-v5kg&s"
+                    data-hp="700" alt="5" />
+                  <img class="thumb"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkLip33h9mRcTiY_jjz-CFg8pW-7ZjG-v5kg&s"
+                    data-hp="700" alt="5" />
+                  <img class="thumb"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkLip33h9mRcTiY_jjz-CFg8pW-7ZjG-v5kg&s"
+                    data-hp="700" alt="5" />
+                  <img class="thumb"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkLip33h9mRcTiY_jjz-CFg8pW-7ZjG-v5kg&s"
+                    data-hp="700" alt="5" />
+                </div>
+              </div>
+              <div class="arrow" onclick="scrollThumbs(1)">&#8681;</div>
+            </div>
+          </div>
+        </div>
+    
+    
+        <!-- Race Track -->
+        <div id="raceTrack" class="container" style="display:none;">
+          <div class="animation-line" id="line"></div>
+        </div>
+    
+        <div id="result"></div>
+    
+    
+        <div id="winnerPopup" class="popup hidden">
+          <div class="popup-content">
+            <span id="popupText"></span>
+            <button onclick="closePopup()">Close</button>
+          </div>
+        </div>
+    
+    
+      
+    
+        <script>
+          const thumbs = document.querySelectorAll('.thumb');
+          const mainDisplay = document.getElementById('mainDisplay');
+          const selectedHPDisplay = document.getElementById('selectedHP');
+          const car2NameDisplay = document.getElementById('car2Name');
+          let selectedHP = 480;
+          let selectedCarName = "Mercedes";
+    
+          thumbs.forEach(img => {
+            img.addEventListener('click', () => {
+              if (mainDisplay.src !== img.src) {
+                mainDisplay.classList.remove('fade');
+                void mainDisplay.offsetWidth;
+                mainDisplay.src = img.src;
+                mainDisplay.classList.add('fade');
+              }
+    
+              selectedHP = parseInt(img.dataset.hp);
+              selectedCarName = img.getAttribute("name") || "Car 2";
+    
+              selectedHPDisplay.innerText = selectedHP;
+              car2NameDisplay.innerText = selectedCarName;
+    
+              thumbs.forEach(i => i.classList.remove('selected'));
+              img.classList.add('selected');
+            });
+          });
+    
+          selectedHPDisplay.innerText = selectedHP;
+          car2NameDisplay.innerText = selectedCarName;
+    
+          function scrollThumbs(direction) {
+            const wrapper = document.getElementById('thumbsWrapper');
+            const scrollAmount = 100 * direction;
+            wrapper.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+          }
+    
+          function startRace() {
+            const bmwHP = parseInt(document.getElementById('bmwHP').innerText);
+    
+            document.getElementById('raceTrack').style.display = 'block';
+            document.querySelector('.box img').classList.add('shake');
+            document.querySelector('.display-area img').classList.add('shake');
+    
+            const line = document.getElementById('line');
+            line.style.animation = 'none';
+            void line.offsetWidth;
+            line.style.animation = 'move 3s linear forwards';
+    
+            document.getElementById('result').innerText = '';
+    
+            setTimeout(() => {
+              let winner = '';
+              const popup = document.getElementById('winnerPopup');
+    
+              if (bmwHP > selectedHP) {
+                winner = '🏆 Car 1 (BMW M4) Wins!';
+              } else if (bmwHP < selectedHP) {
+                winner = `🏎️ Car 2 (${selectedCarName}) Wins!`;
+              } else {
+                winner = "🤝 It's a Tie!";
+              }
+    
+              document.querySelector('.box img').classList.remove('shake');
+              document.querySelector('.display-area img').classList.remove('shake');
+    
+              document.getElementById('popupText').innerText = winner;
+              popup.classList.remove('hidden');
+            }, 2000);
+          }
+    
+          function closePopup() {
+            document.getElementById('winnerPopup').classList.add('hidden');
+          }
+    
+          mainDisplay.onload = () => {
+            mainDisplay.classList.add('fade-loaded');
+            setTimeout(() => {
+              mainDisplay.classList.remove('fade-loaded');
+            }, 500);
+          };
+    
+    
+          let currentStage = 0;
+    
+          function tuneBMW() {
+            const bmwHPDisplay = document.getElementById('bmwHP');
+            const bmwTuneBtn = document.getElementById('bmwTuneBtn');
+            const stagePopup = document.getElementById('stagePopup');
+            const popupText = document.getElementById('stagePopupText');
+    
+            if (currentStage >= 3) return; // Already maxed out
+    
+            currentStage += 1;
+    
+            // Update HP per stage
+            let newHP = 503;
+            if (currentStage === 1) {
+              newHP = 700;
+              const engineSound = document.getElementById('engineSound');
+              engineSound.currentTime = 0; // restart from beginning
+              engineSound.play();
+              engineSound.volume = 0.5; // play sound at 50% volume
+              setTimeout(() => {
+                engineSound.pause(); // pause after 2 seconds
+              }, 2000); // 2 seconds delay
+            }
+            else if (currentStage === 2) {
+              newHP = 950;
+              const engineSound = document.getElementById('engineSound');
+              engineSound.currentTime = 0; // restart from beginning
+              engineSound.play();
+              engineSound.volume = 0.5; // play sound at 50% volume
+              setTimeout(() => {
+                engineSound.pause(); // pause after 2 seconds
+              }, 2000); // 2 seconds delay
+            }
+            else if (currentStage === 3) {
+              newHP = 1200;
+              const engineSound = document.getElementById('engineSound');
+              engineSound.currentTime = 0; // restart from beginning
+              engineSound.play();
+              engineSound.volume = 0.5; // play sound at 50% volume
+              setTimeout(() => {
+                engineSound.pause(); // pause after 2 seconds
+              }, 2000); // 2 seconds delay
+            }
+            bmwHPDisplay.innerText = newHP;
+    
+            // Update Button Text
+            bmwTuneBtn.innerText = `Stage ${currentStage} BMW`;
+    
+            // Show popup
+            popupText.innerText = `🚀 Stage ${currentStage} Tune Applied!`;
+            stagePopup.classList.remove('hidden');
+            stagePopup.classList.add('show');
+    
+            setTimeout(() => {
+              stagePopup.classList.remove('show');
+              stagePopup.classList.add('hidden');
+            }, 2000);
+          }
+    
+    
+    
+    
+    
+    
+        </script>
+    
+    
+    
+      </section>
+    
+            
+      <section class="raceHeading">
+        <p style="color: rgb(0, 0, 0);">This car comparison is for entertainment purposes only. All trademarks and images belong to their respective owners.</p>
+      </section>
+</body>
+</html>

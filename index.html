@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>BMW Cars</title>
+</head>
+
+<body>
+  <section id="stn1">
+    <div class="hero">
+      <div class="overlay"></div>
+      <div class="logoAndMenu">
+        <div class="logo">
+          <img src="logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li><a href="#stn1">Home</a></li>
+            <li><a href="#stn2">About</a></li>
+            <li><a href="#stn4">Information</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1 id="color-animation" class="Upanimetion">Start Your M4 Journey</h1>
+        <p class="Upanimetion">Experience the thrill of pure power and precision. The BMW M4 blends bold design
+          with
+          high-performance engineering — made to excite, built to conquer. Your journey begins now.</p>
+        <br>
+        <a class="Upanimetion" id="StartRace" href="https://amzn.to/4lESF7a" class="btn">Explore Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="stnHeading">
+    <div class="stnText">
+      <p>The BMW M4 Competition delivers exhilarating driving dynamics with cutting-edge technology and aggressive
+        sporty design, offering an uncompromising performance experience</p>
+      <hr>
+      <br>
+      <br>
+
+      <ul>
+        <li>The M4 Competition’s Adaptive M suspension features stiffer springs and precision-tuned dampers for
+          razor-sharp handling and an ultra-responsive driving feel</li>
+        <li>Smart tech meets motorsport — with Reversing Assistant and advanced driver aids, the M4 Competition gives
+          you full control and comfort in every move</li>
+        <li>Command the road from a cockpit built for pure performance — with the BMW Curved Display and touch controls,
+          the M4 Competition puts control and innovation at your fingertips</li>
+      </ul>
+    </div>
+
+
+  </section>
+
+
+
+  <hr>
+
+  <section id="stn2">
+    <h1>DRIVING DYNAMICS.</h1>
+    <br>
+    <div class="interior">
+
+      <a id="bm_infor" href="">
+      <div class="card">
+        <div class="image-wrapper">
+          <div class="image-inner">
+            <img src="imgs/martin-katler-v81h3l0gFHU-unsplash.jpg" alt="forest">
+          </div>
+        </div>
+        <hr>
+        <div class="heading_para">
+          <h2>BMW M4 Body Design – Crafted for Performance</h2>
+          <p>The BMW M4’s body design isn’t just for show – it’s built purely for performance. Every panel is aerodynamically crafted to enhance high-speed stability. The carbon fiber roof, bold lines, and muscular stance give the car a true race-ready look.</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="bm_infor" href="">
+      <div class="card">
+        <div class="heading_para">
+          <h2>BMW M4 Engine – Crafted for Performance</h2>
+          <p>The BMW M4’s engine is a true masterpiece, delivering a perfect blend of performance and precision. Its 3.0L TwinPower Turbo inline-6 engine lets you feel raw power with every rev. This machine doesn’t just run – it roars.</p>
+        </div>
+        <hr>
+        <div class="image-wrapper">
+          <div class="image-inner">
+            <img src="imgs/WhatsApp Image 2025-04-19 at 2.37.20 PM.jpeg" alt="forest">
+          </div>
+        </div>
+      </div>
+    </a>
+
+
+    <a id="bm_infor" href="">
+      <div class="card">
+        <div class="image-wrapper">
+          <div class="image-inner">
+            <img src="./imgs/ChatGPT Image Apr 19, 2025, 02_45_38 PM.png" alt="forest">
+          </div>
+        </div>
+        <hr>
+        <div class="heading_para">
+          <h2>BMW M4 Interior – Where Luxury Meets Motorsport</h2>
+          <p>The interior of the BMW M4 is just as thrilling as its exterior. The driver-focused cockpit, premium materials, and carbon fiber trims provide a true race car feel – without compromising on comfort and luxury. M-badged seats, ambient lighting, and the digital instrument cluster elevate the driving experience to the next level.</p>
+        </div>
+      </div>
+    </a>
+
+    </div>
+  </section>
+
+
+
+  <section id="stn4">
+    <div class="overlay2"></div>
+    <div class="allText_stn4">
+      <h1>BMW M4 – Power Meets Perfection</h1>
+      <p>The BMW M4 is a true masterpiece that perfectly blends performance and luxury. Its high-performance engine
+        doesn't just deliver incredible speed, it brings an adrenaline rush with every acceleration. With sleek
+        aerodynamics, an aggressive front grille, and signature LED headlights, the M4 stands out on the road. BMW’s
+        premium build quality and sharp design lines make this car not just powerful, but a visual treat as well. From
+        every angle, the M4 is a sporty beast that dominates in both style and substance.
+      </p>
+      <a href="">Seen All Information</a>
+    </div>
+  </section>
+  <br>
+  <br>
+
+
+
+  <section id="stn3">
+
+    <div class="container">
+      <!-- BMW M4 Image -->
+      <div class="box">
+        <img src="imgs/devon-janse-van-rensburg-2h3UGhof_fU-unsplash.jpg" alt="BMW Base Image" />
+        <p><strong>BMW M4</strong> - HP: <span id="bmwHP">503</span></p>
+
+        <!-- CS BMW Button -->
+        <button id="bmwTuneBtn" onclick="tuneBMW()">CS BMW</button>
+
+        <!-- Tune Popup -->
+        <div id="stagePopup" class="popup hidden">
+          <div class="popup-content">
+            <p id="stagePopupText">Stage 1 Tune Applied!</p>
+          </div>
+        </div>
+
+        <audio id="engineSound" src="./New folder/big-block-v8-rev-90919.mp3"></audio>
+
+
+
+      </div>
+
+      <!-- Start Race Button -->
+      <div class="container">
+        <button onclick="startRace()">Start Race</button>
+      </div>
+
+
+
+
+      <!-- Comparison Section -->
+      <div class="compare-box">
+        <div class="display-area">
+          <img id="mainDisplay" src="./imgs/aaron-huber-8qYE6LGHW-c-unsplash.jpg" alt="Selected Image" />
+          <p class="carsname"><strong><span style="margin: 12px;" id="car2Name">Mercedes</span><br></strong>
+            &nbsp;&nbsp; HP: <span id="selectedHP"></span></p>
+        </div>
+
+
+        <div class="thumbs-container">
+          <div class="arrow" onclick="scrollThumbs(-1)">&#8679;</div>
+          <div class="thumbs-wrapper" id="thumbsWrapper">
+            <div class="thumbs" id="thumbsList">
+              <img name="Mercedes" class="thumb selected" src="./imgs/aaron-huber-8qYE6LGHW-c-unsplash.jpg"
+                data-hp="480" alt="1" />
+              <img name="Supra Mk4" class="thumb" src="imgs/anastase-maragos-Lrfuy93_hAc-unsplash.jpg" data-hp="700"
+                alt="5" />
+              <img name="Nissan GT-R R35" class="thumb" src="imgs/jonathan-cooper-lihUu1kAbkQ-unsplash.jpg"
+                data-hp="540" alt="2" />
+              <img name="Supra MK5" class="thumb" src="imgs/pexels-garvin-st-villier-719266-3874337.jpg" data-hp="600"
+                alt="3" />
+              <img name="Audi RS6" class="thumb" src="imgs/serjan-midili-8iZdhhP5bwg-unsplash.jpg" data-hp="450"
+                alt="4" />
+              <img name="Nissan GTR r34" class="thumb" src="imgs/sascha-pfyl-nVEWq87fRz0-unsplash.jpg" data-hp="700"
+                alt="5" />
+              <img name="Lamborghini" class="thumb" src="imgs/pexels-lynxexotics-8664306.jpg" data-hp="700" alt="5" />
+            </div>
+          </div>
+          <div class="arrow" onclick="scrollThumbs(1)">&#8681;</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Race Track -->
+    <div id="raceTrack" class="container" style="display:none;">
+      <div class="animation-line" id="line"></div>
+    </div>
+
+    <div id="result"></div>
+
+
+    <div id="winnerPopup" class="popup hidden">
+      <div class="popup-content">
+        <span id="popupText"></span>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+  <section class="raceHeading">
+    <p style="color: rgb(0, 0, 0);">This car comparison is for entertainment purposes only. All trademarks and images
+      belong to their respective owners.</p>
+  </section>
+
+
+
+  <footer id="footer">
+    <div class="footer-content">
+      <!-- footer content -->
+      <h2>BMW Cars</h2>
+      <p>Some AI-generated images are for illustrative purposes. No copyright infringement intended</p>
+      <ul class="footer-links">
+        <li><a href="#stn1">Home</a></li>
+        <li><a href="#stn2">About</a></li>
+        <li><a href="#stn4">Information</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 BMW Cars. All rights reserved.</p>
+      <ul class="social-media">
+        <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
+        <li><a href="#"><img src="twitter-icon.png" alt="Twitter"></a></li>
+        <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
+      </ul>
+    </div>
+  </footer>
+  <br>
+  <script src="script.js"></script>
+</body>
+
+</html>
