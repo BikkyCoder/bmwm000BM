@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
 
@@ -28,23 +28,6 @@ html {
 
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1530px) {
-  .hero {
-    background-image: url('imgs/moaaz-baig-S3bxQ6iN2nE-unsplash.jpg');
-    /* <-- apni image ka path daalna yaha */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 1520px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    position: relative;
-  }
-  
-}
 
 
 
@@ -85,23 +68,6 @@ html {
   border-top-left-radius: 40px;
 
 
-}
-@media only screen and (min-width: 200px) and (max-width: 380px) {
-  .logoAndMenu{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  height: 80px;
-  width: 1157px;
-  padding: 7px 98px;
-  position: fixed;
-  z-index: 300;
-  background: #000000bd;
-  border-top-left-radius: 40px;
-
-  }
-  
 }
 .hero-content {
   height: 300px;
@@ -847,4 +813,65 @@ footer {
 .dg_box1_text {
   margin: 120px;
   text-align: start;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 150px) and (max-width: 1530px) {
+.hero{
+
+}
+.logoAndMenu{
+  width: 510px;
+}
+
+#color-animation {
+  background: linear-gradient(107deg, #ffffff, #444444, #ffffff, #5e5e5e, #000000, #3c3c3c);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 41px;
+}
+.hero-content p {
+  font-size: 14px;
+  margin-top: 11px;
+  color: #a5a5a5;
+  width: 338px;
+  text-align: center;
+}
+
+#stnHeading p {
+  width: 332px;
+  margin: auto;
+  font-size: 20px;
+}
+.stnText {
+  width: 336px;
+  margin: auto;
+}
+.stnText ul {
+  text-align: start;
+  width: 310px;
+}
+
+.card {
+  margin: 1px 12px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 1448px;
+  display: flex;
+  flex-direction: column;
+  height: 308px;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+
+
+
 }
