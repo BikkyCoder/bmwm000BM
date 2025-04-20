@@ -2,33 +2,52 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
 }
+
 body,
 html {
   height: 100%;
   font-family: 'Playfair Display', serif;
-  
+
 }
+
 .hero {
   background-image: url('imgs/moaaz-baig-S3bxQ6iN2nE-unsplash.jpg');
+  /* <-- apni image ka path daalna yaha */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1530px) {
+  .hero {
+    background-image: url('imgs/moaaz-baig-S3bxQ6iN2nE-unsplash.jpg');
     /* <-- apni image ka path daalna yaha */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 1520px;
     display: flex;
     justify-content: center;
     color: white;
     text-align: center;
     position: relative;
+  }
+  
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1230px) {
 
 
-}
 
 .overlay {
   background-color: rgba(0, 0, 0, 0);
@@ -38,6 +57,7 @@ html {
   height: 100%;
   width: 100%;
   z-index: 1;
+
 }
 
 .overlay2 {
@@ -64,8 +84,25 @@ html {
   background: #000000bd;
   border-top-left-radius: 40px;
 
-}
 
+}
+@media only screen and (min-width: 200px) and (max-width: 380px) {
+  .logoAndMenu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  width: 1157px;
+  padding: 7px 98px;
+  position: fixed;
+  z-index: 300;
+  background: #000000bd;
+  border-top-left-radius: 40px;
+
+  }
+  
+}
 .hero-content {
   height: 300px;
   display: flex;
@@ -76,6 +113,7 @@ html {
   position: relative;
   margin: auto;
   background-color: rgb(0 0 0 / 83%);
+
 }
 
 .hero-content h1 {
@@ -96,6 +134,7 @@ html {
 .menu {
   position: relative;
   z-index: 2;
+
 }
 
 #stn2 {
@@ -103,6 +142,7 @@ html {
   background-color: #00000030;
   color: #333;
   text-align: center;
+
 }
 
 #stnHeading {
@@ -125,25 +165,26 @@ html {
 }
 
 
-#stnHeading2{
+#stnHeading2 {
   /* border: 1px solid black; */
   margin: auto;
   width: 1000px;
 }
 
 
-#bm_infor{
+#bm_infor {
   color: black;
   text-decoration: none;
 }
 
-.stnText{
+.stnText {
   width: 1000px;
   margin: auto;
 }
-.stnText ul{
-   text-align: start;
-   width: 1200px;
+
+.stnText ul {
+  text-align: start;
+  width: 1200px;
 }
 
 
@@ -222,6 +263,7 @@ html {
   justify-content: center;
   align-items: center;
   margin: 40px auto;
+
 }
 
 .card {
@@ -236,6 +278,7 @@ html {
   justify-content: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   align-items: center;
+
 }
 
 .card h2 {
@@ -274,6 +317,7 @@ html {
   justify-content: center;
   align-items: center;
   display: flex;
+
 }
 
 .container {
@@ -282,6 +326,7 @@ html {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+
 }
 
 .box,
@@ -290,6 +335,7 @@ html {
   padding: 10px;
   height: 747px;
   margin-top: -70px;
+
 }
 
 img {
@@ -547,12 +593,6 @@ button {
   transform: rotateY(15deg);
 }
 
-
-
-
-
-
-
 #stn4 {
   background-image: url('./imgs/devon-janse-van-rensburg-yoqHLUayUTg-unsplash.jpg');
   /* <-- apni image ka path daalna yaha */
@@ -770,13 +810,14 @@ footer {
   display: flex;
 }
 
-.footer-links{
+.footer-links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   list-style: none;
 }
+
 .footer-links li a {
   color: #000000;
   text-decoration: none;
@@ -784,20 +825,18 @@ footer {
   transition: color 0.3s ease;
 }
 
-
-
-#Digital_bmw{
+#Digital_bmw {
   border: #000000 1px solid;
   margin: 70px auto;
   text-align: center;
 }
 
-.dg_box{
+.dg_box {
   border: 1px solid red;
 }
 
-.dg_box1{
- border: #ff0000 000 1px solid;
+.dg_box1 {
+  border: #ff0000 000 1px solid;
   margin: auto;
   width: 1200px;
   display: flex;
@@ -805,7 +844,7 @@ footer {
   align-items: center;
 }
 
-.dg_box1_text{
+.dg_box1_text {
   margin: 120px;
   text-align: start;
 }
