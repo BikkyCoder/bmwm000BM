@@ -1,6 +1,6 @@
 
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 
 gtag('config', 'G-0Y5GVS3CXG');
@@ -171,4 +171,85 @@ function tuneBMW() {
     stagePopup.classList.add('hidden');
   }, 2000);
 }
+
+
+function toggleAccordion() {
+  const body = document.getElementById("accordionBody");
+  const arrow = document.getElementById("arrow");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate");
+}
+
+
+
+function toggleAccordion2() {
+  const body = document.getElementById("accordionBody2");
+  const arrow = document.getElementById("arrow2");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate");
+}
+
+
+
+function toggleCapacityAccordion() {
+  const body = document.getElementById("accordion-capacity-body");
+  const arrow = document.getElementById("arrow-capacity");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate-capacity");
+}
+
+
+function toggleTyresAccordion() {
+  const body = document.getElementById("accordion-tyres-body");
+  const arrow = document.getElementById("arrow-tyres");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate-tyres");
+}
+
+function toggleExteriorAccordion() {
+  const body = document.getElementById("accordion-exterior-body");
+  const arrow = document.getElementById("arrow-exterior");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate-exterior");
+}
+
+
+function toggleBrakingAccordion() {
+  const body = document.getElementById("accordion-braking-body");
+  const arrow = document.getElementById("arrow-braking");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate-braking");
+}
+
+function toggleSafetyAccordion() {
+  const body = document.getElementById("accordion-safety-body");
+  const arrow = document.getElementById("arrow-safety");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate-safety");
+}
+
+function toggleComfortAccordion() {
+  const body = document.getElementById("accordion-comfort-body");
+  const arrow = document.getElementById("arrow-comfort");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate-comfort");
+}
+
+function toggleLightingAccordion() {
+  const body = document.getElementById("accordion-lighting-body");
+  const arrow = document.getElementById("arrow-lighting");
+
+  body.classList.toggle("open");
+  arrow.classList.toggle("rotate-lighting");
+}
+
+
 
