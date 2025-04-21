@@ -256,6 +256,7 @@ html {
   border: 1px solid black;
   height: 800px;
   width: 1500px;
+  padding-top: 20px;
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -787,10 +788,7 @@ footer {
 
 
 
-@media only screen and (min-width: 150px) and (max-width: 1530px) {
-.hero{
-
-}
+ @media only screen and (min-width: 150px) and (max-width: 1500px) {
 .logoAndMenu{
   width: 510px;
 }
@@ -832,7 +830,7 @@ footer {
   width: 333px;
   display: flex;
   flex-direction: column;
-  height: 550px;
+  height: 598px;
   text-align: center;
   justify-content: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -847,13 +845,13 @@ footer {
 
 .interior {
   width: 354px;
-  display: flex
-;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 40px;
   margin-left: -12px;
+  margin: auto;
 }
 .allText_stn4 p {
   font-size: 19px;
@@ -893,7 +891,7 @@ footer {
 }
 
 #stn3 {
-  /* border: 1px solid black; */
+   border: 1px solid black;
   height: 855px;
   width: 336px;
   margin: auto;
@@ -924,10 +922,6 @@ img {
   border-radius: 10px;
 }
 
-
-
-
-
 footer {
   margin-top: 158px;
   background-color: #575757;
@@ -943,7 +937,22 @@ footer {
   justify-content: space-around;
 }
 
-}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
