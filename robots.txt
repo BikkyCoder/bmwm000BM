@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bikkycoder.github.io/bmwm000BM/sitemap.xml

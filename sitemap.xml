@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://bikkycoder.github.io/</loc>
+   <url>
+    <loc>https://bikkycoder.github.io/bmwm000BM/</loc>
   </url>
   <url>
-    <loc>https://bikkycoder.github.io/bmwm000BM/</loc>
+    <loc>https://bikkycoder.github.io/bmwm000BM/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bikkycoder.github.io/bmwm000BM/race.html</loc>
   </url>
 </urlset>
