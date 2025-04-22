@@ -9,7 +9,7 @@
 body,
 html {
   height: 100%;
-  font-family: 'Playfair Display', serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
@@ -52,6 +52,15 @@ html {
 
 
 
+
+
+
+
+
+
+
+
+
 #StartRace {
   position: relative;
   z-index: 3;
@@ -72,12 +81,11 @@ html {
   align-items: center;
   text-align: center;
   height: 80px;
-  width: 1685px;
+  width: 100%;
   padding: 7px 98px;
   position: fixed;
   z-index: 300;
   background: #000000bd;
-  border-top-left-radius: 40px;
 }
 
 .hero-content {
@@ -864,6 +872,7 @@ footer {
 .accordion-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotate {
@@ -945,6 +954,7 @@ footer {
 .accordionDimensions-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotateDimensions {
@@ -1023,6 +1033,7 @@ footer {
 .accordion-capacity-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotate-capacity {
@@ -1088,6 +1099,7 @@ footer {
 .accordion-tyres-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotate-tyres {
@@ -1153,6 +1165,7 @@ footer {
 .accordion-exterior-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotate-exterior {
@@ -1220,6 +1233,7 @@ footer {
 .accordion-braking-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotate-braking {
@@ -1287,6 +1301,7 @@ footer {
 .accordion-safety-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotate-safety {
@@ -1353,6 +1368,7 @@ footer {
 .accordion-comfort-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotate-comfort {
@@ -1417,6 +1433,7 @@ footer {
 .accordion-lighting-body td {
   padding: 10px;
   border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .rotate-lighting {
@@ -1440,8 +1457,19 @@ footer {
 
 @media only screen and (min-width: 150px) and (max-width: 1500px) {
   .logoAndMenu {
-    width: 557px;
+    width: 100%;
+    justify-content: center;
   }
+
+
+
+  .menu-list li a {
+    padding: 2px 1px;
+    margin: 12px 4px;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    color: white;
+}
 
   #color-animation {
     background: linear-gradient(107deg, #ffffff, #444444, #ffffff, #5e5e5e, #000000, #3c3c3c);
@@ -1556,6 +1584,142 @@ footer {
     display: flex;
   }
 
+
+  .accordion {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 349px;
+    margin: auto;
+    overflow: hidden;
+    text-align: start;
+    justify-content: space-around;
+}
+
+.accordion-body td {
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+
+.accordionDimensions {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 349px;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+.icon {
+  transition: transform 0.3s ease;
+  margin-left: 211px;
+}
+
+.iconDimensions {
+  transition: transform 0.3s ease;
+  margin-left: 222px;
+}
+
+.accordion-capacity {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 349px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.icon-capacity {
+  transition: transform 0.3s ease;
+  margin-left: 241px;
+}
+
+.accordion-tyres {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 349px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.accordion-tyres-header {
+  background-color: #f1f1f1;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  margin-right: -54px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.icon-tyres {
+  transition: transform 0.3s ease;
+  margin-left: 42px;
+}
+
+.accordion-exterior {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 349px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.icon-exterior {
+  transition: transform 0.3s ease;
+  margin-left: 246px;
+}
+
+.accordion-braking {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 349px;
+  margin: auto;
+  overflow: hidden;
+}
+.icon-braking {
+  transition: transform 0.3s ease;
+  margin-left: 226px;
+}
+
+.accordion-safety {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 349px;
+  margin: auto;
+  overflow: hidden;
+}
+.icon-safety {
+  transition: transform 0.3s ease;
+  margin-left: 257px;
+}
+
+.accordion-comfort {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 349px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.icon-comfort {
+  transition: transform 0.3s ease;
+  margin-left: 134px;
+}
+
+.accordion-lighting {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 349px;
+  margin: auto;
+  overflow: hidden;
+}
+.icon-lighting {
+  transition: transform 0.3s ease;
+  margin-left: 242px;
+}
   .racing_note {
     width: 358px;
     position: absolute;
