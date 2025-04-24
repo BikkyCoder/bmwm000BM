@@ -51,6 +51,20 @@ html {
 }
 
 
+.logo {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 5s linear infinite; /* 👈 ye line add kari hai */
+}
+
+.logo img {
+  height: 45px;
+}
+
+
+
 
 
 
@@ -78,6 +92,7 @@ html {
   /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
+  /* background: url('imgs/') no-repeat center center; */
   align-items: center;
   text-align: center;
   height: 80px;
@@ -137,15 +152,86 @@ html {
 
 #stnHeading {
   padding: 60px 20px;
-  background-color: white;
-  color: #333;
+  background-color: #d3d3d3;
+  color: #000000;
   text-align: center;
 
 }
 
+
+
+.infor_hover-box{
+  position: relative;
+  padding: 2rem 4rem;
+  background: #181818;
+  border: 2px solid transparent;
+  color: #bbb;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px -4px black;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.infor_hover-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgb(0, 0, 0), transparent);
+  transform: rotate(0deg);
+  animation: rotate-border 3s linear infinite;
+  z-index: 0;
+}
+
+.infor_hover-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgb(58, 58, 58);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+
+.infor_hover-box:hover::after {
+  opacity: 1;
+}
+
+.infor_hover-box span {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
 #stnHeading h1 {
-  margin-top: 10px;
+  margin-top: -65px;
   font-size: 40px;
+  /* border: 1px solid grey; */
+  background-color: #00000000;
+  padding: 12px 12px;
+  box-shadow: 0px 0px 53px -13px black;
+  transition: all 0.2s ease-in-out;
+}
+#stnHeading h1:hover {
+  box-shadow: 0px 0px 53px -13px rgb(59, 59, 59);
 }
 
 #stnHeading p {
@@ -828,8 +914,9 @@ footer {
 
 
 .accordion {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
+  box-shadow: 0px 0px 8px -6px white;
   width: 1000px;
   margin: auto;
   overflow: hidden;
@@ -839,9 +926,10 @@ footer {
 }
 
 .accordion-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
   padding: 15px;
   cursor: pointer;
+  color: rgb(218, 218, 218);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -850,7 +938,7 @@ footer {
 }
 
 .accordion-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordion-body {
@@ -881,47 +969,26 @@ footer {
 
 .icon {
   transition: transform 0.3s ease;
-  margin-left: 770px;
+  margin-left: 776px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 .accordionDimensions {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
+  box-shadow: 0px 0px 8px -6px white;
+
   width: 1000px;
-  margin: auto;
+  margin: 4px auto;
   overflow: hidden;
 }
 
 .accordionDimensions-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
+  color: rgb(218, 218, 218);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -932,7 +999,7 @@ footer {
 }
 
 .accordionDimensions-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordionDimensions-body {
@@ -992,15 +1059,18 @@ footer {
 
 
 .accordion-capacity {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
+  box-shadow: 0px 0px 8px -6px white;
+
   width: 1000px;
-  margin: auto;
+  margin: 4px auto;
   overflow: hidden;
 }
 
 .accordion-capacity-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
+  color: rgb(218, 218, 218);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -1011,7 +1081,7 @@ footer {
 }
 
 .accordion-capacity-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordion-capacity-body {
@@ -1058,15 +1128,18 @@ footer {
 
 
 .accordion-tyres {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
+  box-shadow: 0px 0px 8px -6px white;
+
   width: 1000px;
-  margin: auto;
+  margin: 4px auto;
   overflow: hidden;
 }
 
 .accordion-tyres-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
+  color: rgb(218, 218, 218);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -1077,7 +1150,7 @@ footer {
 }
 
 .accordion-tyres-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordion-tyres-body {
@@ -1108,7 +1181,7 @@ footer {
 
 .icon-tyres {
   transition: transform 0.3s ease;
-  margin-left: 672px;
+  margin-left: 681px;
 
 
 }
@@ -1124,15 +1197,18 @@ footer {
 
 
 .accordion-exterior {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
+  box-shadow: 0px 0px 8px -6px white;
+
   width: 1000px;
   margin: 20px auto;
   overflow: hidden;
 }
 
 .accordion-exterior-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
+  color: rgb(218, 218, 218);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -1143,7 +1219,7 @@ footer {
 }
 
 .accordion-exterior-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordion-exterior-body {
@@ -1192,15 +1268,18 @@ footer {
 
 
 .accordion-braking {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
   width: 1000px;
+  box-shadow: 0px 0px 8px -6px white;
+
   margin: auto;
   overflow: hidden;
 }
 
 .accordion-braking-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
+  color: rgb(218, 218, 218);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -1211,7 +1290,7 @@ footer {
 }
 
 .accordion-braking-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordion-braking-body {
@@ -1242,7 +1321,7 @@ footer {
 
 .icon-braking {
   transition: transform 0.3s ease;
-  margin-left: 803px;
+  margin-left: 812px;
 
 }
 
@@ -1260,15 +1339,18 @@ footer {
 
 
 .accordion-safety {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
   width: 1000px;
-  margin: auto;
+  margin: 10px auto;
+  box-shadow: 0px 0px 8px -6px white;
+
   overflow: hidden;
 }
 
 .accordion-safety-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
+  color: rgb(218, 218, 218);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -1279,7 +1361,7 @@ footer {
 }
 
 .accordion-safety-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordion-safety-body {
@@ -1310,7 +1392,7 @@ footer {
 
 .icon-safety {
   transition: transform 0.3s ease;
-  margin-left: 898px;
+  margin-left: 894px;
 
 }
 
@@ -1327,15 +1409,18 @@ footer {
 
 
 .accordion-comfort {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
+  box-shadow: 0px 0px 8px -6px white;
+
   width: 1000px;
-  margin: auto;
+  margin: 10px auto;
   overflow: hidden;
 }
 
 .accordion-comfort-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
+  color: rgb(218, 218, 218);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -1346,7 +1431,7 @@ footer {
 }
 
 .accordion-comfort-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordion-comfort-body {
@@ -1377,7 +1462,7 @@ footer {
 
 .icon-comfort {
   transition: transform 0.3s ease;
-  margin-left: 774px;
+  margin-left: 777px;
 
 }
 
@@ -1392,15 +1477,18 @@ footer {
 
 
 .accordion-lighting {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
   width: 1000px;
+  box-shadow: 0px 0px 8px -6px white;
+
   margin:  auto;
   overflow: hidden;
 }
 
 .accordion-lighting-header {
-  background-color: #f1f1f1;
+  background-color: #161616;
+  color: rgb(218, 218, 218);
   padding: 15px;
   cursor: pointer;
   display: flex;
@@ -1411,7 +1499,7 @@ footer {
 }
 
 .accordion-lighting-header:hover {
-  background-color: #e0e0e0;
+  background-color: #292929;
 }
 
 .accordion-lighting-body {
@@ -1534,6 +1622,9 @@ footer {
     margin-left: -12px;
     margin: auto;
   }
+
+
+  
 
   .allText_stn4 p {
     font-size: 19px;

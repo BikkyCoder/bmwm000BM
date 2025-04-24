@@ -253,3 +253,12 @@ function toggleLightingAccordion() {
 
 
 
+const box = document.getElementById('hoverBox');
+const spotlight = document.getElementById('spotlight');
+
+box.addEventListener('mousemove', (e) => {
+  const rect = box.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.2), transparent 60%)`;
+});
