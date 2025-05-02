@@ -63,18 +63,6 @@ html {
   height: 45px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 #StartRace {
   position: relative;
   z-index: 3;
@@ -1036,28 +1024,6 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .accordion-capacity {
   /* border: 1px solid #ccc; */
   border-radius: 5px;
@@ -1114,18 +1080,6 @@ footer {
   transition: transform 0.3s ease;
   margin-left: 872px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .accordion-tyres {
   /* border: 1px solid #ccc; */
@@ -1186,16 +1140,6 @@ footer {
 
 }
 
-
-
-
-
-
-
-
-
-
-
 .accordion-exterior {
   /* border: 1px solid #ccc; */
   border-radius: 5px;
@@ -1253,17 +1197,6 @@ footer {
   margin-left: 880px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1326,18 +1259,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .accordion-safety {
   /* border: 1px solid #ccc; */
   border-radius: 5px;
@@ -1395,17 +1316,6 @@ footer {
   margin-left: 894px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 .accordion-comfort {
@@ -1467,15 +1377,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
 .accordion-lighting {
   /* border: 1px solid #ccc; */
   border-radius: 5px;
@@ -1533,15 +1434,6 @@ footer {
   margin-left: 883px;
 
 }
-
-
-
-
-
-
-
-
-
 
 @media only screen and (min-width: 150px) and (max-width: 1500px) {
   .logoAndMenu {
@@ -1622,9 +1514,6 @@ footer {
     margin-left: -12px;
     margin: auto;
   }
-
-
-  
 
   .allText_stn4 p {
     font-size: 19px;
